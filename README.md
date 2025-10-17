@@ -2,6 +2,23 @@
 
 Monte Carlo simulation for studying twisted magnetic skyrmions.
 
+### Background  
+The starting point is an anisotropic Kondo–lattice Hamiltonian that combines ordinary exchange coupling ($J_1$) and an additional anisotropic Kondo interaction ($J_2$):
+
+$$\mathcal{H} =- \sum_{i,\gamma,\sigma} \left( t_\gamma\, c_{i\sigma}^\dagger c_{i+\gamma,\sigma} + \text{H.c.} \right)+ J_1 \sum_i \mathbf{S}_i \cdot \boldsymbol{\tau}_i+ J_2 \sum_i (\mathbf{S}_i \times \boldsymbol{\tau}_i) \cdot \hat{z}.$$
+
+The $J_2$ term introduces an in-plane twist between localized and itinerant spins, producing an **effective local spin**
+
+
+$\mathbf{S}_i^{\text{eff}} = \mathbf{S}_i + \frac{J_2}{J_1}\, \hat{z} \times \mathbf{S}_i$
+
+which rotates the spin quantization axis by an angle proportional to the ratio  
+$\alpha = J_2 / J_1$.
+
+This transformation gives rise to a finite helicity  
+$\gamma = -\arctan(\alpha)$,  
+so the skyrmion’s internal rotation directly reflects the balance between conventional and anisotropic Kondo couplings.  
+
 ## Key Parameters
 
 Edit in `input_parameters.py`:
@@ -24,7 +41,7 @@ Creates `Bzmn_X.XXXXX/` folders with:
 
 ![Skyrmion Configuration 1](result_plot.png)
 
-Skyrmion lattice at low temperature. Arrows show in-plane spins, colors show out-of-plane component.
+Skyrmion lattice at low temperature; (a) $J2/J1 = 0$, and (b) $J2/J1 = 0.9$. Arrows show in-plane spins, colors show out-of-plane component.
 
 ## Speed
 
