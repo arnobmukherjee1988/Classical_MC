@@ -3,11 +3,11 @@ import os
 import time
 
 from input_parameters import *
-from energy_functions_numba import compute_total_energy
-from observables_numba import (compute_magnetization, compute_structure_factor_fft, 
+from energy_functions import compute_total_energy
+from observables import (compute_magnetization, compute_structure_factor_fft, 
                                compute_structure_factor_tildemag_fft, compute_skyrmion_density,
                                compute_helicity, compute_chirality)
-from monte_carlo_numba import initialize_random_spins_numba, monte_carlo_step_numba
+from monte_carlo import initialize_random_spins_numba, monte_carlo_step_numba
 from file_io_functions import (setup_output_directories, open_output_files, close_output_files,
                                write_summary_data, write_all_configuration_files)
 
